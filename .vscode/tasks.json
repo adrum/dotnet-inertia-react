@@ -1,0 +1,86 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Watch all",
+            "dependsOn": [
+                "dotnet watch",
+                "vite dev"
+            ],
+            "dependsOrder": "parallel",
+            "group": "build",
+            "problemMatcher": [
+                "$tsc-watch"
+            ],
+            "isBackground": true
+        },
+        // Vite
+        {
+            "label": "vite dev",
+            "command": "npm",
+            "type": "process",
+            "args": [
+                "run",
+                "dev"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/ClientApp"
+            }
+        },
+        {
+            "label": "vite build",
+            "command": "npm",
+            "type": "process",
+            "args": [
+                "run",
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/ClientApp"
+            }
+        },
+        // dotnet
+        {
+            "label": "dotnet build",
+            "command": "dotnet",
+            "type": "process",
+            "isBuildCommand": true,
+            "args": [
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "dotnet watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}",
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "dotnet publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
