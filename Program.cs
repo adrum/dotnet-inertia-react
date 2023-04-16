@@ -1,10 +1,16 @@
+using InertiaCore.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddInertia();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+app.UseInertia();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
