@@ -23,16 +23,7 @@ export default defineConfig({
     },
   },
   build: {
-    minify: false,
     outDir,
-    assetsDir: "js",
     emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        entryFileNames: `js/[name].js`,
-        chunkFileNames: `js/[name].js`,
-        assetFileNames: `js/[name].[ext]`,
-      },
-    },
   },
 });
