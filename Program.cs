@@ -4,7 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddInertia().AddViteHelper(options =>
+builder.Services.AddInertia();
+builder.Services.AddViteHelper(options =>
 {
     options.PublicDirectory = "wwwroot";
     options.BuildDirectory = "build";
