@@ -4,7 +4,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddInertia();
+builder.Services.AddInertia().AddViteHelper(options =>
+{
+    options.PublicDirectory = "wwwroot";
+    options.BuildDirectory = "build";
+    options.HotFile = "hot";
+    options.ManifestFilename = "manifest.json";
+});
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
