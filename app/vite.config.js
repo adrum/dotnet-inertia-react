@@ -4,7 +4,7 @@ import laravel from "laravel-vite-plugin";
 import path from "path";
 import { mkdirSync } from "fs";
 
-const outDir = "../wwwroot/build";
+const outDir = "../web/wwwroot/build";
 
 mkdirSync(outDir, { recursive: true });
 
