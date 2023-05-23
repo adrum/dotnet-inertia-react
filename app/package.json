@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "cross-env vite",
+    "build": "corss-env tsc && cross-env vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@inertiajs/react": "^1.0.3",
+    "cross-env": "^7.0.3",
     "laravel-vite-plugin": "^0.7.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
