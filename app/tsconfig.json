@@ -15,8 +15,6 @@
         "./src/*"
       ]
     },
-    "types": [
-      "vite/client"
-    ]
+    "types": []
   }
 }
